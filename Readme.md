@@ -1,4 +1,4 @@
-#Courses Application
+#Hacker News Application
 
 ##Virginie Trubiano and Bojana Skarich
 
@@ -6,11 +6,7 @@
 
 ###Description
 
-This app will create multiple courses with a roster or list of students in each course. It utilizes AngularJS framework, factories and controllers written in JavaScript, and AngularUI Router to organize states, which control how the user interface looks and its behavior for certain parts of the website.
-
-
-
-use AngularUI Router, which is organized around states. States describe how the user interface looks and behaves in a particular part of your application.
+This app creates a website where users post links to articles and vote on the best ones, whether these are their own links or other people's links. Users will vote for the links they like the most. The links with the most votes will appear at the top of the screen, as well as the most recent links. Newer links will receive a higher ranking. Users will be able to comment on links. 
 
 
 
