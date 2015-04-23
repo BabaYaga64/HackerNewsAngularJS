@@ -1,8 +1,9 @@
 hackerNews.factory('PostsFactory', function PostsFactory() {
     var factory = {};
     factory.posts = [];
+
     factory.addPost = function() {
-        factory.posts.push({ title: factory.postTitle, link: factory.postLink, id: factory.posts.length + 1, comments: [] });
+        factory.posts.push({ title: factory.postTitle, link: factory.postLink, ranking: 0, id: factory.posts.length + 1, comments: [] });
         factory.postTitle = null;
     };
 
@@ -14,5 +15,10 @@ hackerNews.factory('PostsFactory', function PostsFactory() {
         }
         return null;
     };
+
+    factory.raiseRank = function(item) {
+        item.ranking += 1;
+    };
+
     return factory;
 });
