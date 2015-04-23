@@ -1,9 +1,12 @@
 <h1>Hacker News</h1>
 
-<form ng-submit='PostsFactory.addPost()' class='form-inline'>
+<form ng-submit='PostsFactory.addPost()' class='form-inline' role='form'>
     <div class='form-group'>
         <h3>New Post</h3>
-        <input type='text' ng-model='PostsFactory.postTitle' class='form-control'>
+        <label for="post">Title :</label>
+        <input type='text' ng-model='PostsFactory.postTitle' class='form-control' placeholder='Title Post' required>
+        <label for="link">Link :</label>
+        <input type="text" ng-model='PostsFactory.postLink' class='form-control' placeholder='http://www.example.com' required>
     </div>
     <button type='submit'>Post</button>
 </form>
@@ -13,7 +16,8 @@
     <ul>
         <li ng-repeat='item in posts'><a href="{{item.link}}">{{item.title}}</a>
             <p><a ui-sref='comments({ postId: item.id})'>Comment</a></p>
-            <div ui-view> </div>
         </li>
     </ul>
 </div>
+
+<div ui-view> </div>
