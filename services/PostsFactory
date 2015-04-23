@@ -1,0 +1,18 @@
+hackerNews.factory('PostsFactory', function PostsFactory() {
+    var factory = {};
+    factory.posts = [];
+    factory.addPost = function() {
+        factory.posts.push({ title: factory.postTitle, id: factory.posts.length + 1,comments: [] });
+        factory.postTitle = null;
+    };
+
+    factory.findById = function(id) {
+        for (var i= 0; i < factory.posts.length; i++) {
+            if (factory.posts[i].id == id) {
+                return factory.posts[i];
+            }
+        }
+        return null;
+    };
+    return factory;
+});
