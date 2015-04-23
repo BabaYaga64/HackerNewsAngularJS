@@ -8,7 +8,6 @@
         <label for="link">Link :</label>
         <input type="text" ng-model='PostsFactory.postLink' class='form-control' placeholder='http://www.example.com' required>
         <button type='submit' class='btn btn-success'>Post</button>
-
     </div>
 </form>
 
@@ -16,10 +15,12 @@
     <h2>Here are all the posts</h2>
     <ul>
         <li ng-repeat='item in posts'>
-            <a ng-click='PostsFactory.raiseRank(item)'>
-                <span class='glyphicon glyphicon-circle-arrow-up'></span>
-            </a>
-            <p>{{item.ranking}}</p>
+            <div class='ranking'>
+                <a ng-click='PostsFactory.raiseRank(item)'>
+                    <span class='glyphicon glyphicon-circle-arrow-up'></span>
+                </a>
+                <p>{{item.ranking}}</p>
+            </div>
             <a href="{{item.link}}">{{item.title}}</a>
             <p> - <a ui-sref='comments({ postId: item.id})'>Comment</a> - </p>
         </li>
