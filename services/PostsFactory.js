@@ -3,7 +3,7 @@ hackerNews.factory('PostsFactory', function PostsFactory() {
     factory.posts = [];
 
     factory.addPost = function() {
-        factory.posts.push({ title: factory.postTitle, link: factory.postLink, ranking: 0, id: factory.posts.length + 1, comments: [] });
+        factory.posts.push({ title: factory.postTitle, link: factory.postLink, ranking: 0, id: factory.posts.length + 1, comments: [], date: new Date() });
         factory.postTitle = null;
         factory.postLink = null;
     };
