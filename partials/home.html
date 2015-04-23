@@ -1,0 +1,22 @@
+<h1>Hacker News</h1>
+
+<div ng-show='posts.length'>
+    <h2>Here are all the posts</h2>
+    <ul>
+        <li ng-repeat='item in posts'><a href="{{item.link}}">{{item.title}}</a>
+            <p><a ui-sref='comments({ postId: item.id})'>Comment</a></p>
+            <div ui-view> </div>
+        </li>
+    </ul>
+
+</div>
+
+
+
+<form ng-submit='PostsFactory.addPost()' class='form-inline'>
+    <div class='form-group'>
+        <h3>New Post</h3>
+        <input type='text' ng-model='PostsFactory.postTitle' class='form-control'>
+    </div>
+    <button type='submit'>Post</button>
+</form>
