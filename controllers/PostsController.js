@@ -12,7 +12,15 @@ hackerNews.controller('PostsCtrl', function PostsCtrl($scope, PostsFactory) {
   $scope.postIsStillRelevant = function(post) {
       console.log("hello");
       var timeElapsed = new Date() - post.date;
-      return timeElapsed < 10000;
+
+      for (var i = 0; i < $scope.posts.length; i++) {
+          if ($scope.posts[i].ranking !== 0) {
+              timeElapsed - (2000000 * $scope.posts[i].ranking);
+          }
+      }
+      //the value below is the number of milleseconds in one hour
+      return timeElapsed < 3600000;
+
   };
 
   // $scope.postStatus = function() {
