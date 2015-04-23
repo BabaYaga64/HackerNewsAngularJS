@@ -14,7 +14,7 @@
 <div ng-show='posts.length'>
     <h2>Here are all the posts</h2>
     <ul>
-        <li ng-repeat='item in posts'>
+        <li ng-repeat='item in posts | orderBy : "-ranking"'>
             <div class='ranking'>
                 <a ng-click='PostsFactory.raiseRank(item)'>
                     <span class='glyphicon glyphicon-circle-arrow-up'></span>
