@@ -6,3 +6,10 @@
     float: left;
     margin-right: 13px;
 }
+
+body {
+    background-position: fixed;
+    top: 500;
+    background: url('../img/binary-tunnel.jpg') no-repeat center;
+    /*background-size: cover;*/
+}
