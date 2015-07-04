@@ -3,7 +3,7 @@
 <div class="inputform">
 <form ng-submit='PostsFactory.addPost()' class='form-inline' role='form'>
     <div class='form-group'>
-        <h3>New Post</h3>
+        <h3>Add a Post</h3>
         <label for="post">Title :</label>
         <input type='text' ng-model='PostsFactory.postTitle' class='form-control' placeholder='Title Post' required>
         <label for="link">Link :</label>
@@ -15,6 +15,7 @@
 
 <div ng-show='posts.length' class="output">
     <h2>Here are all the posts</h2>
+    <h4>Click on blue arrow to upvote a post.</h4>
     <ul>
         <li ng-repeat='item in posts | filter:postIsStillRelevant | orderBy : "-ranking"'>
             <div class='ranking'>

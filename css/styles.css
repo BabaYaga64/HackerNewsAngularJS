@@ -30,6 +30,8 @@ form {
 .output {
 	background-color: #2A2D33;
 	border-radius: 15px;
+	margin-top: 25px;
+	padding: 25px;
 
 }
 
@@ -56,8 +58,45 @@ label {
 	color: #949699;
 }
 
+h4 {
+	color: #949699;
+}
 
+.ng-binding {
+	color: #fff;
+}
 
+.commentsheading {
+	color: #000;
+}
+
+.commentsbutton {
+	padding: 20px;
+
+}
+
+.commentsform {
+	border-radius: 15px;
+	margin-top: 30px;
+	padding: 30px;
+	background-color: #2A2D33;
+}
+
+.showcomments {
+	border-radius: 15px;
+	margin-top: 30px;
+	padding: 30px;
+	background-color: #2A2D33;
+
+}
+
+.commentsuser {
+	color: #949699;
+}
+
+textarea.ng-binding {
+	color: #000;
+}
 
 /* Mobile styles */
 
@@ -72,6 +111,18 @@ label {
 	}
 }
 
+}
+
+@media (min-width: 560px) and (max-width: 720px) {
+	textarea {
+		max-width: 400px;
+	}
+}
+
+@media (max-width: 559px) {
+	textarea {
+		max-width: 250px;
+	}
 }
 
 

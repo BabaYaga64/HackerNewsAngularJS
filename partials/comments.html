@@ -1,7 +1,9 @@
-<h2>Comments - <a ui-sref='home'><span class='btn btn-info'>Back Home</span></a></h2>
+<h2 class="commentsheading">Comments</h2>
+
+<a class="commentsbutton" ui-sref='home'><span class='btn btn-info'>Back Home</span></a>
 
 <form ng-submit="addComment()" class='form-inline' role='form'>
-    <div class='form-group'>
+    <div class="commentsform" class='form-group'>
         <label for="cUserName">User Name :</label>
         <input type="text" ng-model='cUserName' class='form-control'>
         <label for="comment">Add a Comment :</label>
@@ -10,11 +12,11 @@
     </div>
 </form>
 
-<div ng-show='post.comments.length'>
-    <h2>Here are all the comment for that post</h2>
+<div class="showcomments" ng-show='post.comments.length'>
+    <h2>Here are all the comments for the post</h2>
     <ul>
         <li ng-repeat='item in post.comments'>
-            <p><em>{{item.cUserName}}</em></p>
+            <p class="commentsuser"><em>{{item.cUserName}}</em></p>
             <textarea row='2' cols='80' disabled>{{item.description}}</textarea>
         </li>
     </ul>
