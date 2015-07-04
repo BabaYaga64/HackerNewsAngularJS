@@ -10,6 +10,69 @@
 body {
     background-position: fixed;
     top: 500;
-    background: url('../img/binary-tunnel.jpg') no-repeat center;
+    background: url('../img/matrix2.jpg') no-repeat;
     /*background-size: cover;*/
 }
+
+.inputform {
+	background-color: #2A2D33;
+	border-radius: 15px;
+	padding: 25px;
+
+}
+
+form {
+	margin-bottom: 10px;
+}
+
+
+
+.output {
+	background-color: #2A2D33;
+	border-radius: 15px;
+
+}
+
+body {
+		font-family: 'Ubuntu Mono', Courier, sans-serif;
+}
+
+.ng-scope h1 {
+	font-family: 'Ubuntu Mono', Courier, sans-serif;
+	font-weight: 700;
+	color: #000;
+	font-size: 4em;
+}
+
+h2, h3 {
+	color: #fff;
+}
+
+.form-inline .form-group {
+	margin-bottom: 30px;
+}
+
+label {
+	color: #949699;
+}
+
+
+
+
+/* Mobile styles */
+
+@media (max-width: 766px) {
+	.btn {
+		margin-top: 20px;
+	}
+
+@media (min-width: 768px) {
+	.btn {
+		margin-left: 50px;
+	}
+}
+
+}
+
+
+

@@ -1,5 +1,6 @@
 <h1>Hacker News</h1>
 
+<div class="inputform">
 <form ng-submit='PostsFactory.addPost()' class='form-inline' role='form'>
     <div class='form-group'>
         <h3>New Post</h3>
@@ -10,8 +11,9 @@
         <button type='submit' class='btn btn-success'>Post</button>
     </div>
 </form>
+</div>
 
-<div ng-show='posts.length'>
+<div ng-show='posts.length' class="output">
     <h2>Here are all the posts</h2>
     <ul>
         <li ng-repeat='item in posts | filter:postIsStillRelevant | orderBy : "-ranking"'>
@@ -27,5 +29,6 @@
         </li>
     </ul>
 </div>
+
 
 <div ui-view> </div>
